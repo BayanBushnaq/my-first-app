@@ -10,13 +10,13 @@ class Child extends React.Component{
     constructor(props) {
         super(props); 
         this.state = {
-            numOfLikes :1
+            numOfLikes :"💓"
         }
     }
 
     incrementNumOfLikes = () => {
         this.setState({
-            numOfLikes : this.state.numOfLikes + 1
+            numOfLikes : this.state.numOfLikes + "💓"
            
         })
     }
@@ -29,7 +29,7 @@ class Child extends React.Component{
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>{this.props.des}</Card.Text>
                 <Card.Text>
-                  Favorite 💓 : {this.state.numOfLikes}
+                  Favorite  : {this.state.numOfLikes}
                 </Card.Text>
               </Card.Body>
             </Card>

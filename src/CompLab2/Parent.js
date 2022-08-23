@@ -9,6 +9,7 @@ Data.map((val)=>{
     });
 
 class Parent extends React.Component{
+
     render(){
         return(card)  
     }
