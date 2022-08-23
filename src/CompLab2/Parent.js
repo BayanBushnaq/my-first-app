@@ -2,6 +2,7 @@ import React from 'react';
 import Data from '../Data'
 import Child from '../CompLab2/Child'
 
+
 let card=
 Data.map((val)=>{
          return(
@@ -11,7 +12,12 @@ Data.map((val)=>{
 class Parent extends React.Component{
 
     render(){
-        return(card)  
+        
+        return (card) 
+        
+        
+    
+        
     }
 }
 
