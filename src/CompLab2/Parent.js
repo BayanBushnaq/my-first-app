@@ -3,6 +3,7 @@ import Data from '../Data'
 import Child from '../CompLab2/Child'
 
 
+
 let card=
 Data.map((val)=>{
          return(
@@ -12,8 +13,12 @@ Data.map((val)=>{
 class Parent extends React.Component{
 
     render(){
+        return (
+           (card)
+           
+        )
         
-        return (card) 
+        
     }
 }
 
@@ -24,3 +29,7 @@ export default Parent;
 // <h3><img src={val.image_url}/></h3>;
 // <h3>{val.description}</h3>
 // <h3>Favoriets:</h3>
+
+{/* <selectedBeast showMode={this.state.show} handleClose={this.handleClose}/> */}
+
+// onClick={()=>{this.props.myFunction(this.props.title)}}
