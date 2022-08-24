@@ -8,30 +8,30 @@ import Data from '../Data'
 
 class selectedBeast extends React.Component{
 
-constructor(props){
-     super(props);
-     this.state={
-      seltBeast : {},
-      show:false
+// constructor(props){
+//      super(props);
+//      this.state={
+//       seltBeast : {},
+//       show:false
    
 
-     }
+//      }
 
-     myFunction=(title)=>{
-      const selectedBeast=Data.find(beast => beast.title === title);
-      this.setState({
-        show:true ,
-        seltBeast:selectedBeast
+//      myFunction=(title)=>{
+//       const selectedBeast=Data.find(beast => beast.title === title);
+//       this.setState({
+//         show:true ,
+//         seltBeast:selectedBeast
       
-      })
-     }
+//       })
+//      }
 
-     handleClose=()=>{
-      this.setState({
-        show:false
-      })
-     }
-    }
+//      handleClose=()=>{
+//       this.setState({
+//         show:false
+//       })
+//      }
+//     }
     render(){
         return (
         <>
