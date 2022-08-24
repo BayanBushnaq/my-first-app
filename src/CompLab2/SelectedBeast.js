@@ -1,27 +1,61 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Data from '../Data'
 
 
 
-class selectBeast extends React.Component{
+
+class selectedBeast extends React.Component{
+
+constructor(props){
+     super(props);
+     this.state={
+      seltBeast : {},
+      show:false
+   
+
+     }
+
+     myFunction=(title)=>{
+      const selectedBeast=Data.find(beast => beast.title === title);
+      this.setState({
+        show:true ,
+        seltBeast:selectedBeast
+      
+      })
+     }
+
+     handleClose=()=>{
+      this.setState({
+        show:false
+      })
+     }
+    }
     render(){
         return (
+        <>
+          
+      
+      <Modal show={this.props.showModel} onHide={this.props.handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img src={this.props.selectedBeast.image_url}></img>
+          <p>{this.props.selectBeast.description}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.props.handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+        </>)
         
-        <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card> )
+    
     }
 
 }
 
-export default selectBeast ;
+export default selectedBeast ;

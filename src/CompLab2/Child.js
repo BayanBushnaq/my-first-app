@@ -22,7 +22,8 @@ class Child extends React.Component{
     }
     render(){
         return (
-            
+          <>
+          
             <Card  style={{ width: '18rem' }} >
               <Card.Img variant="top" src={this.props.img} onClick={this.incrementNumOfLikes}/>
               <Card.Body>
@@ -33,7 +34,7 @@ class Child extends React.Component{
                 </Card.Text>
               </Card.Body>
             </Card>
-          
+            </>
           );
 
         }
